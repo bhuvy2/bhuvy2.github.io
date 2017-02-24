@@ -28,6 +28,169 @@
 
 
 <section><section id="lock-free-magic" class="titleslide slide level1"><h1>Lock Free Magic</h1></section></section>
+<section><section id="why-do-we-need-multithreading" class="titleslide slide level1"><h1>Why Do We Need Multithreading?</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/break.gif" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/cpulol.jpg" />
+</figure>
+</section></section>
+<section><section id="okay-im-going-to-multithread" class="titleslide slide level1"><h1>Okay I'm Going To Multithread</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/something.jpg" />
+</figure>
+</section></section>
+<section><section id="synchronize-your-code" class="titleslide slide level1"><h1>Synchronize your code!</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/mutex.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/cantblocked.jpg" />
+</figure>
+</section></section>
+<section><section id="mutexes-are-slow" class="titleslide slide level1"><h1>Mutexes are slow!</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/trump1.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/putin.png" />
+</figure>
+</section><section id="no-but-actually" class="slide level2">
+<h2>No but actually</h2>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/why_not_mutex.png" />
+</figure>
+<p>Under high concurrency ie <em>nodejs real dev language</em>.</p>
+</section></section>
+<section><section id="but-thats-upsetting" class="titleslide slide level1"><h1>But that's upsetting</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/theta.jpg" />
+</figure>
+</section></section>
+<section><section id="we-live-for-optimization" class="titleslide slide level1"><h1>We live for optimization</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/lock_free.png" />
+</figure>
+</section><section class="slide level2">
+
+<p>We aren't going to use a mutex!</p>
+</section><section id="well-use-this" class="slide level2">
+<h2>We'll use this</h2>
+<figure>
+<img src="/presentation/cas.png" />
+</figure>
+</section></section>
+<section><section id="are-you-ready-for-lock-free" class="titleslide slide level1"><h1>Are you ready for lock free?</h1></section><section id="are-you-sure" class="slide level2">
+<h2>Are you sure?</h2>
+</section><section id="i-dont-think-you-are" class="slide level2">
+<h2>I don't think you are</h2>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/pseudo.png" />
+</figure>
+</section><section id="see-werent-ready..." class="slide level2">
+<h2>See weren't ready...</h2>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/pseudo.png" />
+</figure>
+</section></section>
+<section><section id="how-does-an-insert-work" class="titleslide slide level1"><h1>How does an insert work?</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/list1.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/list2.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/pseudo.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/list3.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/pseudo.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/list4.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/pseudo.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/list5.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/list6.png" />
+</figure>
+</section></section>
+<section><section id="but-its-not-always-better" class="titleslide slide level1"><h1>But it's not always better</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/dequeue32.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/knifejuggle3.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/knifejuggle4.png" />
+</figure>
+</section></section>
+<section><section id="thats-it" class="titleslide slide level1"><h1>That's it!</h1></section><section class="slide level2">
+
+<figure>
+<img src="/presentation/smiling.jpg" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/cloud.jpg" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="/presentation/data.jpg" />
+</figure>
+</section></section>
+<section><section id="questions-bvenkat2illinois.edu" class="titleslide slide level1"><h1>Questions? bvenkat2@illinois.edu</h1></section></section>
     </div>
   </div>
 
