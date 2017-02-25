@@ -102,7 +102,7 @@ We aren't going to use a mutex!
 
 ---
 
-![](/presentation/pseudo.png)
+![](/presentation/enqueue.png)
 
 ---
 
@@ -110,7 +110,7 @@ We aren't going to use a mutex!
 
 ---
 
-![](/presentation/pseudo.png)
+![](/presentation/enqueue.png)
 
 ---
 
@@ -118,15 +118,34 @@ We aren't going to use a mutex!
 
 ---
 
-![](/presentation/pseudo.png)
+![](/presentation/enqueue.png)
+
+# Dequeue'ing
 
 ---
 
-![](/presentation/list5.png)
+![](/presentation/deq0.png)
 
 ---
 
-![](/presentation/list6.png)
+![](/presentation/dequeue.png)
+
+---
+
+![](/presentation/deq1.png)
+
+---
+
+![](/presentation/dequeue.png)
+
+---
+
+![](/presentation/deq2.png)
+
+---
+
+![](/presentation/deq3.png)
+
 
 # But it's not always better
 
