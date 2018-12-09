@@ -11,3 +11,10 @@ before_deploy:
   -in deploy_key.enc -out /tmp/deploy_key -d
 - eval "$(ssh-agent -s)" 
 - ssh-add /tmp/deploy_key
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch:
+      - deploy
