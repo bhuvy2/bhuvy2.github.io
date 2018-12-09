@@ -4,7 +4,7 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavItem,} from 'reactstrap';
+    NavItem, Nav} from 'reactstrap';
 
 export default class NavBar extends Component {
     constructor(props) {
