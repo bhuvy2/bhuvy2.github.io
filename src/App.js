@@ -5,7 +5,6 @@ import NavBar from './components/navbar';
 import Writing from './pages/Writing';
 import Tech from './pages/Tech';
 import MarkdownGenerator from './pages/MarkdownGenerator';
-
 const Index = MarkdownGenerator('index');
 
 class Page extends Component {
@@ -18,12 +17,18 @@ class Page extends Component {
                 <div className="row content-row">
                 <div className="offset-md-2 col-md-6">
                 <Switch>
+                <Route exact
+                path={process.env.PUBLIC_URL + '/'}
+                component={() => <Index />} />
 
-                <Route exact path="/" component={() => <Index /> }/>
+                <Route
+                path={process.env.PUBLIC_URL + '/writing'}
+                component={() => <Writing />} />
 
-                <Route path="/writing" component={() => <Writing />} />
+                <Route
+                path={process.env.PUBLIC_URL + '/tech'}
+                component={() => <Tech />} />
 
-                <Route path="/tech" component={() => <Tech />} />
                 </Switch>
                 </div>
                 </div>
@@ -44,7 +49,7 @@ class Page extends Component {
 class App extends Component {
   render() {
     return (
-            <BrowserRouter >
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className="full-height">
             <NavBar />
             <Page />
