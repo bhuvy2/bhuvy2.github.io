@@ -1,26 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch, Link, } from 'react-router-dom';
-import content from './md/';
+import { BrowserRouter, Route, Switch, } from 'react-router-dom';
 import NavBar from './components/navbar';
-import TransitionGroup from "react-transition-group/TransitionGroup";
-import { CSSTransition } from 'react-transition-group';
 import Writing from './pages/Writing';
 import Tech from './pages/Tech';
 import MarkdownGenerator from './pages/MarkdownGenerator';
 
 const Index = MarkdownGenerator('index');
 
-const firstChild = props => {
-    const childrenArray = React.Children.toArray(props.children);
-    return childrenArray[0] || null;
-};
-
 class Page extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     goBack(){
         window.history.back();
     }

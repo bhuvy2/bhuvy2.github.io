@@ -4,13 +4,7 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    NavItem,} from 'reactstrap';
 
 export default class NavBar extends Component {
     constructor(props) {
