@@ -2,7 +2,7 @@
 
 Hi, I'm Bhuvan, people also call me bhuvy.
 
-I love all things tech and datascience. I have most recently worked for ![facebook](www.facebook.com) as a part of their election integrity team. I also currently attend the [University of Illinois at Urbana Champaign](illinois.edu) for Computer Science.
+I love all things tech and datascience. I have most recently worked for ![facebook](https://www.facebook.com) as a part of their election integrity team. I also currently attend the [University of Illinois at Urbana Champaign](https://www.illinois.edu) for Computer Science.
 
 I also have interests in Math, Psychology, Sociology, History, Literature, Economics, and a few of the Arts. I believe that every problem that we have has ben fundamentally solved; it's just up to use to connect the pieces.
 
