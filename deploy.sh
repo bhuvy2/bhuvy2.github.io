@@ -3,7 +3,7 @@
 set -e;
 
 TMP_DIR=`mktemp -d`
-cp ./build $TMP_DIR;
+mv ./build $TMP_DIR;
 
 pushd $TMP_DIR;
 
