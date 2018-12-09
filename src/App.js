@@ -1,53 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch, Link, } from 'react-router-dom';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+import content from './md/';
+import NavBar from './components/navbar';
+import TransitionGroup from "react-transition-group/TransitionGroup";
+import { CSSTransition } from 'react-transition-group';
+import Writing from './pages/Writing';
+import Tech from './pages/Tech';
+import MarkdownGenerator from './pages/MarkdownGenerator';
 
-class NavBar extends Component {
-    constructor(props) {
-        super(props);
+const Index = MarkdownGenerator('index');
 
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            isOpen: false
-        };
-    }
-
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-
-    render() {
-        return (
-            <Navbar color="light" light expand="md" className="col-md-10 col-sm-12">
-          <Link to='/' className='navbar-brand'>bhuvy</Link>
-                <NavbarToggler onClick={this.toggle} className="mr-2" />
-                <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <Link to='/' className='nav-link'>Index</Link>
-              </NavItem>
-              <NavItem>
-                <Link to='/home' className='nav-link'>Home</Link>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-        );
-    }
-}
+const firstChild = props => {
+    const childrenArray = React.Children.toArray(props.children);
+    return childrenArray[0] || null;
+};
 
 class Page extends Component {
     constructor(props) {
@@ -59,19 +26,20 @@ class Page extends Component {
     }
 
     render() {
-        let index = <><h1>Index</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></>
-
-        let home = <><h1>Home</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></>
         return (<div id="content" className="container-fluid full-height">
                 <div className="row content-row">
                 <div className="offset-md-2 col-md-6">
                 <Switch>
-                <Route exact path='/' component={() =>
-                                                 index} />
-                <Route exact path='/hello' component={() => home} />
+
+                <Route exact path="/" component={() => <Index /> }/>
+
+                <Route path="/writing" component={() => <Writing />} />
+
+                <Route path="/tech" component={() => <Tech />} />
                 </Switch>
                 </div>
                 </div>
+
                 <div id="footer" className="row">
                 <div className="col-md-1">
                 <button
@@ -81,7 +49,7 @@ class Page extends Component {
                 </button>
                 </div>
                 </div>
-                </div>)
+                </div>);
     }
 }
 
@@ -89,7 +57,7 @@ class App extends Component {
   render() {
     return (
             <BrowserRouter >
-            <div class="full-height">
+            <div className="full-height">
             <NavBar />
             <Page />
             </div>
