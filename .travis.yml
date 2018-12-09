@@ -4,11 +4,5 @@ node_js:
 cache: npm
 install:
   - npm install
-before_build:
-  - echo 1
-after_build:
-  - echo 1
-test:
-  - echo 1
-build:
+script:
   - npm build
