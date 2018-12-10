@@ -1,4 +1,5 @@
-import content from './index.md';
+import indexContent from './index.md';
+import yearnSeaContent from './yearn_sea.md';
 import * as JSON5 from 'json5';
 import {BLOCK_ELEMENTS} from '../enums';
 import * as _ from 'lodash';
@@ -68,7 +69,19 @@ const processFile = (file, content) => {
     return {content: bodyPartition, title: title};
 };
 
-const exports = {};
-exports['index'] = processFile('index', content);
+const addTagsToFile = (fname, contentInQ, args) => {
+    const ret = processFile(fname, contentInQ);
+    for (let key in args) {
+        ret[key] = args[key];
+    }
+    const ret2 = {};
+    ret2[fname] = ret;
+    return ret2;
+};
+
+const exports = {
+    ...addTagsToFile('index', indexContent, {type: 'misc'}),
+//    ...addTagsToFile('yearn_sea', yearnSeaContent, {type: 'writing'})
+};
 
 export default exports;

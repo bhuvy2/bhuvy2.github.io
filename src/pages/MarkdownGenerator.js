@@ -24,7 +24,7 @@ const renderElem = (e, key) => {
         return <div key={key} ></div>;
     case BLOCK_ELEMENTS.PARAGRAPH:
         const para = {__html: e.text};
-        return <p dangerouslySetInnerHTML={para}></p>;
+        return <p key={key} dangerouslySetInnerHTML={para}></p>;
     case BLOCK_ELEMENTS.TABLE:
         return <div key={key} ></div>;
     case BLOCK_ELEMENTS.TABLEROW:
