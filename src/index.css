@@ -103,3 +103,7 @@ button.back-button:focus {
     padding-top: 5vh;
 }
 
+div.markdown-card img {
+    width: 100%;
+}
+
