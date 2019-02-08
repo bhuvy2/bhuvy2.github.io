@@ -1,5 +1,6 @@
 import indexContent from './index.md';
-import yearnSeaContent from './yearn_sea.md';
+//import yearnSeaContent from './yearn_sea.md';
+import ikebanaContent from './ikebana.md';
 import * as JSON5 from 'json5';
 import {BLOCK_ELEMENTS} from '../enums';
 import * as _ from 'lodash';
@@ -81,6 +82,7 @@ const addTagsToFile = (fname, contentInQ, args) => {
 
 const exports = {
     ...addTagsToFile('index', indexContent, {type: 'misc'}),
+    ...addTagsToFile('ikebana', ikebanaContent, {type: 'art'}),
 //    ...addTagsToFile('yearn_sea', yearnSeaContent, {type: 'writing'})
 };
 
