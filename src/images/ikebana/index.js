@@ -1,7 +1,7 @@
 import './first_ikebana.jpeg';
 import './ikebana_oblique.jpeg';
 import './ikebana_weaving.jpeg';
-import './ikebana_bouncy.jpeg';
+import './ikebana_bouncing.jpeg';
 import './ikebana_tiny.jpeg';
 import './ikebana_hanging.jpeg';
 import './ikebana_lively.jpeg';

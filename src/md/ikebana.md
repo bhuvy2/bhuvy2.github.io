@@ -17,7 +17,7 @@ Some of my friends ask why flower arrangement is so hard, and I say "Because it'
 
 ## Bouncy
 
-<img src="/static/media/ikebana_bouncy.jpeg" />
+<img src="/static/media/ikebana_bouncing.jpeg" />
 
 ## Tiny
 
