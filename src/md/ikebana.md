@@ -9,3 +9,34 @@ Some of my friends ask why flower arrangement is so hard, and I say "Because it'
 ## Oblique
 
 <img src="/static/media/ikebana_oblique.jpeg" />
+
+
+## Weaving
+
+<img src="/static/media/ikebana_weaving.jpeg" />
+
+## Bouncy
+
+<img src="/static/media/ikebana_bouncy.jpeg" />
+
+## Tiny
+
+<img src="/static/media/ikebana_tiny.jpeg" />
+
+## Hanging
+
+<img src="/static/media/ikebana_hanging.jpeg" />
+
+## Lively
+
+<img src="/static/media/ikebana_lively.jpeg" />
+
+### Always make time to stop and smell the flowers
+
+<img src="/static/media/flowers_fbdinner.jpeg" />
+
+<img src="/static/media/flowers_fbroof1.jpeg" />
+
+<img src="/static/media/flowers_fbroof2.jpeg" />
+
+<img src="/static/media/flowers_fbroof3.jpeg" />
