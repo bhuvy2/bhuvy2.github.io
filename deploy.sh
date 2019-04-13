@@ -3,7 +3,7 @@
 set -e;
 
 TMP_DIR=`mktemp -d`
-cp -R ./build/* $TMP_DIR;
+cp -R ./_site/* $TMP_DIR;
 
 pushd $TMP_DIR;
 

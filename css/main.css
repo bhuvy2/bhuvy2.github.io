@@ -1,0 +1,84 @@
+html {
+    min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F0F8FF ;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif;;
+}
+
+nav {
+    margin: auto;
+    border-bottom: 4px solid black;
+    font-family: 'Lato', sans-serif;;
+}
+
+nav.bg-light {
+    background-color: transparent !important;
+}
+
+div.mobile-nav {
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    div.mobile-nav {
+        display: inherit;
+    }
+}
+
+p {
+    font-family: 'Merriweather Sans', sans-serif;;
+}
+
+body, .full-height, #root {
+    min-height: 100vh;
+}
+
+.content-row {
+    min-height: 70vh;
+}
+
+@-webkit-keyframes fade-in {
+    0% { padding-top: 20px; opacity: 0;}
+    100%{ padding-top: 0px; opacity: 1;}
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button.back-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+button.back-button:focus {
+    outline: none;
+}
+
+#content {
+    min-height: 100%;
+    padding-top: 5vh;
+}
+
+div.markdown-card img {
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+}
+
+div.card {
+    border: none;
+}
