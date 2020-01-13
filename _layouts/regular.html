@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+
+<div id="root">
+<div class="full-height">
+    {% include navbar.html %}
+<div id="content" class="container-fluid full-height">
+<div class="row content-row">
+<div class="offset-md-2 col-md-6">
+    <div class="card">
+    <h1>{{ page.title }}</h1>
+    <p><em>{{ page.posted_date }}</em><p>
+    </div>
+    {{ content | content_style }}
+</div>
+</div>
+</div>
+
+{% include footer.html %}
+
+{% include cookie-notice.html %}
+
+</div>
+
+</div>
+
+{% asset main.js @inline %}
+
+</body>
+</html>

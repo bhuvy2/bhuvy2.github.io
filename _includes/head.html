@@ -1,0 +1,63 @@
+
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="/favicon/tiger-152.png">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/tiger-144.png">
+
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/tiger-152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/tiger-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/tiger-120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/tiger-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/tiger-72.png">
+<link rel="apple-touch-icon-precomposed" href="/favicon/tiger-57.png">
+<link rel="icon" href="/favicon/tiger-32.png" sizes="32x32">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name="theme-color" content="#000000">
+<link href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans:300" rel="stylesheet">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
+{% if page.title %}
+<title>{{page.title}}</title>
+{% else %}
+<title>{{site.title}}</title>
+{% endif %}
+
+<!-- <link href="/css/main.css" rel="stylesheet"> -->
+{% asset main.css @inline %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
+
+<!-- Opengraph -->
+<meta property="og:locale" content="en_US">
+
+{% if page.title %}
+<meta property="og:title" content="{{page.title}}" />
+{% else %}
+<meta property="og:title" content="{{site.title}}" />
+{% endif %}
+
+
+{% if page.type %}
+<meta property="og:type" content="{{page.type}}" />
+{% else %}
+<meta property="og:type" content="article" />
+{% endif %}
+
+<meta property="og:url" content="{{site.url}}{{page.url}}" />
+
+{% if page.opengraph %}
+<meta property="og:image" content="{{site.url}}/images/open-graph/{{page.opengraph}}" />
+{% else %}
+<meta property="og:image" content="{{site.url}}/images/open-graph/tiger-og.png" />
+<meta property="og:image:alt" content="Tiger Image" />
+{% endif %}
+
+{% if page.description %}
+<meta property="og:description" content="{{page.description}}" />
+{% else %}
+<meta property="og:description" content="Just another article" />
+{% endif %}
+

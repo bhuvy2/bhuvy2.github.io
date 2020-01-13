@@ -1,0 +1,47 @@
+title: Bhuvy's Blog
+email: bhuvan.venkatesh21@gmail.com
+description: Bhuvan Venkatesh's Personal Site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://bhuvy.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: bhuvy2
+github_username: bhuvy2
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-assets
+collections:
+  tech:
+    output: true
+    permalink: /tech/:path
+  livepages:
+    output: true
+    permalink: /:path
+  writing:
+    output: true
+    permalink: /writing/:path
+feed:
+  collections:
+    - tech
+    - writing
+reveal:
+  css_url: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.css'
+  css_theme_url: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.css'
+  css_syntax_url: '/css/reveal-code-style.css'
+  lib_head_url: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js'
+  reveal_js_url: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.js'
+plugins_dir:
+  - _plugins
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

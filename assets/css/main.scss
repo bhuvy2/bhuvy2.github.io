@@ -1,0 +1,157 @@
+---
+---
+
+html {
+    min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F0F8FF ;
+  font-family: 'Merriweather Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif;;
+}
+
+p {
+    font-family: 'Merriweather Sans', sans-serif;;
+}
+
+body, .full-height, #root {
+    min-height: 100vh;
+}
+
+.content-row {
+    min-height: 70vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#content {
+    min-height: 100%;
+    padding-top: 5vh;
+}
+
+div.markdown-card img {
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+}
+
+div.card {
+    border: none;
+    padding-top: 20px;
+}
+
+#cookie-notice {
+    padding: 7px 15px;
+    display: none;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+    color: rgba(255,255,255,0.8);
+}
+
+#cookie-notice a {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+
+    #cookie-notice span {
+        display: block;
+        padding-top: 3px;
+        margin-bottom: 13px;
+    }
+
+    #cookie-notice a {
+        position: relative;
+        bottom: 4px;
+    }
+}
+
+#footer {
+    align-items: center;
+    justify-content: center;
+}
+
+#footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    border-top: 4px solid black;
+    padding-top: 20px;
+}
+
+img {
+    display: inline-block;
+    max-width: 80%;
+}
+
+// Navbar
+
+.navbar {
+    margin: auto;
+    font-family: sans-serif;
+    border-bottom: 4px solid black;
+}
+
+.navbar-brand a {
+    color: rgba(0,0,0,.9);
+}
+
+.navbar-link a {
+    color: rgba(0,0,0,.5);
+}
+
+.navbar-link a {
+    color: rgba(0,0,0,.7);
+}
+
+.navbar-items {
+    display: flex;
+}
+
+.navbar-items--right {
+    margin-left: auto;
+}
+
+.navbar-link-toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-items,
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar-items {
+        display:none;
+    }
+    .navbar-items--right {
+        margin-left:0;
+    }
+    .navbar-toggle-show {
+        display: flex;
+    }
+    .navbar-link-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+}

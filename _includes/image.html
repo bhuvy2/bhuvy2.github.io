@@ -1,0 +1,7 @@
+<figure class="image">
+    <a href='{% linkstring {{ include.url }} %}' >
+    {% asset "{{ include.url }}" @optim alt="{{ include.description }}" %}
+    </a>
+    <figcaption>{{ include.description }}</figcaption>
+</figure>
+
