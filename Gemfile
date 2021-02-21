@@ -24,7 +24,7 @@ gem "htmlentities", "~> 4.3.4"
 # gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-gem 'sprockets', '=4.0.0.beta8'
+gem 'sprockets', '=4.0.0'
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem 'jekyll-assets', :git => 'https://github.com/jekyll/jekyll-assets.git'
