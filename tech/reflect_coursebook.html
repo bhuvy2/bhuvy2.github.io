@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="/favicon/tiger-152.png">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/tiger-144.png">
+
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/tiger-152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/tiger-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/tiger-120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/tiger-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/tiger-72.png">
+<link rel="apple-touch-icon-precomposed" href="/favicon/tiger-57.png">
+<link rel="icon" href="/favicon/tiger-32.png" sizes="32x32">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name="theme-color" content="#000000">
+<link href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans:300" rel="stylesheet">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://bhuvy.com/tech/reflect_coursebook">
+
+
+<title>Reflecting on the Coursebook</title>
+
+
+<!-- <link href="/css/main.css" rel="stylesheet"> -->
+<style rel="stylesheet" type="text/css" integrity="sha512-NJW544Dc+sKpGCaKOWrfvW5Bc0otSNSI9qm6rVADNsTvIc7KRy0ZRn8poqDZrU3JxhNsFYiPzS4QjBE8eW8yMw==" crossorigin="anonymous">html{min-height:100%}body{margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#F0F8FF;font-family:'Merriweather Sans', sans-serif !important}h1,h2,h3,h4{font-family:'Lato', sans-serif}p{font-family:'Merriweather Sans', sans-serif}body,.full-height,#root{min-height:100vh}.content-row{min-height:70vh}code{font-family:source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace}#content{min-height:100%;padding-top:5vh}div.markdown-card img{max-width:100%;max-height:80vh;width:auto;height:auto}div.card{border:none;padding-top:20px}#cookie-notice{padding:7px 15px;display:none;text-align:center;position:fixed;bottom:0;width:100%;background:#111;color:rgba(255,255,255,0.8)}#cookie-notice a{cursor:pointer;margin-left:10px}@media (max-width: 767px){#cookie-notice span{display:block;padding-top:3px;margin-bottom:13px}#cookie-notice a{position:relative;bottom:4px}}#footer{align-items:center;justify-content:center}#footer ul{list-style:none;display:flex;align-items:center;justify-content:center;margin-top:80px;border-top:4px solid black;padding-top:20px}img{display:inline-block;max-width:80%}.navbar{margin:auto;font-family:sans-serif;border-bottom:4px solid black}.navbar-brand a{color:rgba(0,0,0,0.9)}.navbar-link a{color:rgba(0,0,0,0.5)}.navbar-link a{color:rgba(0,0,0,0.7)}.navbar-items{display:flex}.navbar-items--right{margin-left:auto}.navbar-link-toggle{display:none}@media only screen and (max-width: 768px){.navbar-items,.navbar{flex-direction:column}.navbar-items{display:none}.navbar-items--right{margin-left:0}.navbar-toggle-show{display:flex}.navbar-link-toggle{align-self:flex-end;display:initial;position:absolute;cursor:pointer}}
+/*# sourceMappingURL=/assets/source-maps/main.scss.map */
+/*# sourceURL=assets/css/main.scss */
+</style>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
+
+<!-- Opengraph -->
+<meta property="og:locale" content="en_US">
+
+
+<meta property="og:title" content="Reflecting on the Coursebook" />
+
+
+
+
+<meta property="og:type" content="article" />
+
+
+<meta property="og:url" content="https://bhuvy.com/tech/reflect_coursebook" />
+
+
+<meta property="og:image" content="https://bhuvy.com/images/open-graph/tiger-og.png" />
+<meta property="og:image:alt" content="Tiger Image" />
+
+
+
+<meta property="og:description" content="Reflecting on the new Systems Programming Coursebook" />
+
+
+
+</head>
+<body>
+
+<div id="root">
+<div class="full-height">
+    <div class="navbar-wrapper">
+<div class="navbar col-md-10 col-sm-12">
+    <div class="navbar-link navbar-link-brand">
+        <a class="navbar-brand" href="/">bhuvy</a>
+    </div>
+    <div class="navbar-link navbar-link-toggle navbar-light">
+        <button type="button" class="mr-2 navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <nav class="navbar-items navbar-items--right">
+        <div class="navbar-link">
+            <a class="nav-link" href="/writing">Writing</a>
+        </div>
+        <div class="navbar-link">
+            <a class="nav-link" href="/tech">Tech</a>
+        </div>
+    </nav>
+</div>
+</div>
+
+<div id="content" class="container-fluid full-height">
+<div class="row content-row">
+<div class="offset-md-2 col-md-6">
+    <div class="card">
+    <h1>Reflecting on the Coursebook</h1>
+    <p><em>2019-12-06</em><p>
+    </div>
+    <div class="wrapper">
+<p>Recently, I undertook a massive project to rewrite the textbook that we use for the systems programming course at the University of Illinois at Urbana Champaign.
+The previous version or as we call it the wikibook <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> was a wikipedia-like book.
+On average it got most things right, but as a college course we needed everything to be right, and a number of improvements to the text needed to be made.
+Some of the biggest ones were</p>
+
+<ul>
+  <li>Lack of depth for the later sections</li>
+  <li>Lack of verification with other sources</li>
+  <li>Lack of variational tones – the wiki mainly stuck with question answer format.</li>
+</ul>
+
+<p>As such, we embarked on the long, tedious journey of turning our series of notes into something resembling a textbook.</p>
+
+<div class="card">
+<h2 id="origin-story">Origin Story</h2>
+
+<p>One of the original goals we wanted was a printable version of the book usually in a PDF form, but also to keep a markdown and HTML version somewhere for ease and accessibility.
+The only way at the time that we could do that was with LaTeX and pandoc.
+We’d use the LaTeX to build PDFs and pandoc to convert the source to markdown and HTML versions.
+Latex was chosen because the pdf semantics are better than pure markdown – try left aligning an image without any extensions!
+Pandoc is a wonderful tool to convert from various mark{up,down} formats.</p>
+
+<p>The first part of the story was a mechanical conversion from markdown to LaTeX, fixing the markdown parsing errors along the way.
+Then came one of the biggest hurdles, transforming that Question Answer (QA) format into a storytelling format.
+Stories are one of the best ways of learning and textbooks are no different.
+Although, they are more dry, the message tends to stick better than getting a list of facts to memorize.
+Also in order to keep the benefit of redundant QA for retention, we left in active “spot the problem questions” and redundantly explained concepts.</p>
+
+<p>Once all the chapters were rewritten in a rough new format, we had to actually compile the documents in all the different versions.
+After setting up some base PDF builds, I set up a markdown version which synced with the course website <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.
+Some time later, we developed per-chapter builds as well, so students could download the latest and greatest version of each chapter as it was getting fresh pressed.
+Being programmers, there were a few checks that we included like making sure each image has a caption.
+There were a few checks that we didn’t include – namely spell and grammar check.
+There weren’t enough high-quality tools that gave us meaningful feedback to make it worth implementing into our pipeline, so we made do without it.
+We also couldn’t do anything in general like code compiling and/or pdf validation because many of our code examples were broken up into chunks and pdf are hard to “validate” – pdflatex almost surely throughs errors even if the resulting pdf is fine.</p>
+
+</div>
+<div class="card">
+<h2 id="researching">Researching</h2>
+
+<p>Researching was one of my favorites and also the longest running part of the book.
+While reading was enlightening, researching the far depths of systems makes things colorful.
+Admittedly, I am more interested in data, algorithms, and the theory side of computer science, but there were many important concepts whose theoretical angles haven’t been explored.</p>
+
+<p>Some of the parts included a theoretical discussion of how memory allocators are placed <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>, sketches of proofs for dining philosophers <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, and queueing theory <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>.
+The theoretical aspects give just enough intuition for theory-oriented readers to understand the concepts.
+Researching them was also an archeological hunt.
+Having to deep dive into ancient research papers and results and translate many of them to a single, easy to explain format meant understanding the underlying material very well.
+Some researching were tales of interesting “nerd hunts”, anything from figuring out why a kilobyte was actually 1024 Bytes (not 1000 Bytes) to why network byte-ordering is big endian.</p>
+
+<p>Researching obviously takes a lot of time, understanding, and referencing, but it is well worth it to make sure that the information provided is complete, correct, and explorable to anyone who has an inkling to read more.
+Having most of the resources be freely available online texts was also a goal.
+The fundamental goal of the coursebook and wikibook as to be free and available to all, not just those with an Elsevier subscription.</p>
+
+</div>
+<div class="card">
+<h2 id="images">Images</h2>
+
+<p>Something I learned about myself in the generation of the book is I really like making figures!
+Figures are, I believe, the best way to learn, and the less words the better.
+We understand so much through images, but the original wikibook had a lack of informational and usable images (in the copyright sense).
+As a fix, I went through and redrew and added a host of figures.</p>
+
+<p>Everything from splitting and coalescing memory blocks, writing files on filesystems, and visualizing deadlock in dining philosophers has a diagram.
+These diagrams take inspiration from the Ikea manual mindset, where the minimal number of pictures with little to no words to convey the flow of time, action, and meaning.</p>
+
+<p>In addition to just picking a good design for images, designing figures really got my creative side going.
+Albeit they aren’t the most creative images on the web, they are a nice starting point for creating and maintaining graphic designs and gaining proficiency with the tools.
+Incorporating constraints like contrast, color blindness, and aesthetics was a refreshing learning experience.
+There is still I have to learn about composition, construction, and other requirements, but I hope I can pick those up on my travels.</p>
+
+</div>
+<div class="card">
+<h2 id="polish-polish-polish">Polish Polish Polish</h2>
+
+<p>Finally, we need to polish the book as much as possible.
+All of the headers on the PDF and HTML builds need to look spotless.
+We implemented custom title pages, chapter headers, and pretty much every other sort of PDF style to give the book the appearance of being fully fleshed out.
+In the HTML version, there are highlighted man page links, the references to citations are hyperlinked, and the CSS doesn’t look too bad either.</p>
+
+<p>There have been numerous addition of transition sentences, word flow considerations, and sectioning to make the reading easier.
+The images all have a caption and any ascii art or code samples are commented through.
+Although we are system programmers, we still like our terminals to be pretty colors.</p>
+
+</div>
+<div class="card">
+<h2 id="epilogue">Epilogue</h2>
+
+<p>This is far from an actual ending.
+The coursebook is still very much under development with a laundry list of issues and features that need to be added.
+As with anything in life, it is an incomplete project that needs constant updates <sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>.
+If you’d like to help out feel free to join the grind!
+I’d say it’s worth it to keep high-quality knowledge free and available for the world.</p>
+
+</div>
+<div class="card">
+<h2 id="footnotes">Footnotes</h2>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://github.com/angrave/SystemProgramming/wiki">Wikibook</a> <a href="#fnref:1" class="reversefootnote">↩</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="http://cs241.cs.illinois.edu/coursebook">Course Website</a> <a href="#fnref:2" class="reversefootnote">↩</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="http://cs241.cs.illinois.edu/coursebook/Malloc#intro-to-allocating">Theoretical Memory Allocators</a> (Scroll down to pros and cons) <a href="#fnref:3" class="reversefootnote">↩</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="cs241.cs.illinois.edu/coursebook/Deadlock#viable-solutions">Dining Philosophers</a> <a href="#fnref:4" class="reversefootnote">↩</a></p>
+    </li>
+    <li id="fn:5">
+      <p><a href="cs241.cs.illinois.edu/coursebook/Deadlock#viable-solutions">Queueing Theory</a> <a href="#fnref:5" class="reversefootnote">↩</a></p>
+    </li>
+    <li id="fn:6">
+      <p><a href="https://github.com/illinois-cs241/coursebook">Coursebook Github</a> <a href="#fnref:6" class="reversefootnote">↩</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="footer" class="row">
+<ul>
+    <li class="nav-item">
+        © 2019 Bhuvan Venkatesh
+    </li>
+<li class="nav-item">
+<a class="nav-link" href="/privacy">Privacy</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="https://forms.gle/5wBNaTh8ZFe2j8ia6">Feedback</a>
+</li>
+</ul>
+</div>
+
+
+
+<div id="cookie-notice">
+<span>
+We use cookies and scripts to improve the functionality of this website.
+</span>
+<a id="cookie-notice-accept" class="btn btn-primary btn-sm">Duly Noted</a>
+<a href="/privacy" class="btn btn-primary btn-sm">More info</a>
+</div>
+
+
+</div>
+
+</div>
+
+<script type="text/javascript" integrity="sha512-wUKpqWFLOd0cigsAP1Ae2XOqiuHS4lDdITak245tq58HVhfVPXY3lDL5BZlsq2B++IBtxqLo+2QAF209XK901Q==" crossorigin="anonymous">"use strict";
+
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {   
+    document.cookie = name+'=; Max-Age=-99999999;';  
+}
+
+function ready(fn) {
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+function classToggle() {
+    const navs = document.querySelectorAll('.navbar-items');
+    for (let i = 0; i < navs.length; ++i) {
+        const nav = navs[i];
+        nav.classList.toggle('navbar-toggle-show');
+    }
+}
+
+
+ready(function(){
+    document.querySelector('.navbar-link-toggle').addEventListener('click', classToggle);
+
+    const cookieName = 'cookie-notice-dismissed';
+    const cookieNoticeVal = 'true';
+    const appId = 'UA-82139438-1';
+
+    if(getCookie(cookieName) === cookieNoticeVal) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', appId, 'auto');
+        ga('send', 'pageview');
+    } else {
+        document.getElementById('cookie-notice').style.display='block';
+    }
+
+    const acceptElem = document.getElementById('cookie-notice-accept');
+    const acceptHandler = function() {
+        setCookie(cookieName,cookieNoticeVal,31);
+        document.getElementById('cookie-notice').style.display='none';
+    };
+    acceptElem.onclick = acceptHandler;
+});
+</script>
+
+</body>
+</html>

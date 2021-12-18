@@ -1,0 +1,13 @@
+/* TEAM */
+Your title: Bhuvan Venkatesh
+Site: bhuvan.venkatesh21@gmail.com
+Twitter: bhuvy2
+Location: Champaign, Illinois
+                        
+/* THANKS */
+                        
+/* SITE */
+                        
+Standards: HTML5, CSS3, Javascript
+Components: Bootstrap
+Software: Jekyll
