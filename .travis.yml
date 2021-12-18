@@ -1,18 +1,16 @@
 dist: xenial
 language: ruby
 rvm:
-  - 2.6.0
+- 2.6.0
 env:
-  - JEKYLL_ENV=production
-cache: 
+- JEKYLL_ENV=production
+cache:
   bundler: true
   directories:
-    - $TRAVIS_BUILD_DIR/.jekyll-cache
+  - "$TRAVIS_BUILD_DIR/.jekyll-cache"
 branches:
   only: develop
 before_deploy:
-- openssl aes-256-cbc -K $encrypted_98a2fa371a1b_key -iv $encrypted_98a2fa371a1b_iv
-  -in deploy_key.enc -out /tmp/deploy_key -d
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/deploy_key
 - ssh-add /tmp/deploy_key
@@ -22,4 +20,7 @@ deploy:
   script: bash deploy.sh
   on:
     branch:
-      - develop
+    - develop
+before_install:
+- openssl aes-256-cbc -K $encrypted_1853e33ef5a2_key -iv $encrypted_1853e33ef5a2_iv
+  -in id_rsa.enc -out /tmp/deploy_key -d
